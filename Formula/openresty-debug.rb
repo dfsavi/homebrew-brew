@@ -15,7 +15,7 @@ class OpenrestyDebug < Formula
   depends_on "pcre"
   depends_on "postgresql" => :optional
   depends_on "openresty/brew/openresty-openssl3"
-  depends_on "geoip"
+  depends_on "libmaxminddb"
 
   skip_clean "site"
   skip_clean "pod"
@@ -55,7 +55,6 @@ class OpenrestyDebug < Formula
       --with-http_auth_request_module
       --with-http_secure_link_module
       --with-http_random_index_module
-      --with-http_geoip_module
       --with-http_gzip_static_module
       --with-http_sub_module
       --with-http_dav_module
